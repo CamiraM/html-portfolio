@@ -1,0 +1,253 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-button {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Page Styles */
+.page {
+    height: 100vh; /* Set height to 100% of viewport */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Allow absolute positioning of children */
+}
+
+.page .content {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.page h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #FF6F3C;
+}
+
+.btn-secondary {
+    background-color: #555555;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align form elements */
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width for larger screens */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: white;
+}
+
+textarea {
+    height: 100px; /* Height for the textarea */
+}
+
+button[type="submit"] {
+    background-color: #FF6F3C;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF5733; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: #333333;
+    padding: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+    }
+    .hamburger {
+        display: block; /* Show hamburger */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .page h2 {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    .page .content {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none; /* Hide all slides by default */
+}
+
+img, video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Logo Styles */
+.logo {
+    width: 150px; /* Adjust the size as needed */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin: 5px 0;
+    font-size: 0.8em; /* Adjust font size */
+    color: #FFFFFF; /* Ensure contrast with background */
+
+}
+
+/* Footer Styles */
+footer {
+    background: #333333;
+    padding: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative; /* Allow for stacking */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}

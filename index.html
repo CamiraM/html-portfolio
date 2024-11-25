@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Foundry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">Media Foundry</div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-button">Home</a></li>
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#services" class="nav-button">Services</a></li>
+                <li><a href="#portfolio" class="nav-button">Portfolio</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="page" style="background-image: url('hero-image.jpg');">
+        <div class="content" data-aos="fade-up">
+            <h1>Welcome to Media Foundry</h1>
+            <p>Photography | Videography | Media Production</p>
+            <div class="navigation-buttons">
+                <a href="#about" class="btn-primary">Explore More</a>
+                <a href="#services" class="btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page" style="background-image: url('about-bg.jpg');">
+        <div class="content" data-aos="flip-left">
+            <h2>About Us</h2>
+            <p>We bring your stories to life through captivating visuals and immersive media experiences.</p>
+            <div class="navigation-buttons">
+                <a href="#services" class="btn-primary">Our Services</a>
+                <a href="#portfolio" class="btn-secondary">Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="page" style="background-image: url('services-bg.jpg');">
+        <div class="content" data-aos="fade-up">
+            <h2>Our Services</h2>
+            <div class="service">
+                <i class="icon-camera"></i>
+                <h3>Photography</h3>
+                <p>Portraits, Events, Product shoots, and more.</p>
+            </div>
+            <div class="service">
+                <i class="icon-video"></i>
+                <h3>Videography</h3>
+                <p>Promotional, Corporate, and Event videos.</p>
+            </div>
+            <div class="service">
+                <i class="icon-edit"></i>
+                <h3>Video Editing</h3>
+                <p>Professional editing for all types of videos.</p>
+            </div>
+            <div class="service">
+                <i class="icon-design"></i>
+                <h3>Graphic Design</h3>
+                <p>Creative design solutions for branding and media.</p>
+            </div>
+            <div class="navigation-buttons">
+                <a href="#portfolio" class="btn-primary">Our Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="page" style="background-image: url('portfolio-bg.jpg');">
+        <div class="content" data-aos="zoom-in">
+            <h2>Our Work</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="portfolio1.jpg" style="width:100%">
+                    <div class="text">Description of Image/Video 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <video controls style="width:100%">
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="text">Description of Video 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="portfolio2.jpg" style="width:100%">
+                    <div class="text">Description of Image/Video 2</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <video controls style="width:100%">
+                        <source src="video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="text">Description of Video 2</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <div class="navigation-buttons">
+                <a href="#contact" class="btn-primary">Contact Us</a>
+                <a href="#hero" class="btn-secondary">Back to Top</a>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="page" style="background-image: url('contact-bg.jpg');">
+    <div class="content" data-aos="flip-up">
+        <img src="logo.png" alt="Media Foundry Logo" class="logo">
+        <h2>Contact Us</h2>
+        <p>Get in touch for your next project!</p>
+        
+        <form id="contactForm" onsubmit="sendEmail(event)">
+            <input type="text" placeholder="Your Name" name="name" id="name" required>
+            <input type="email" placeholder="Your Email" name="email" id="email" required>
+            <textarea placeholder="Your Message" name="message" id="message" required></textarea>
+            
+            <!-- Honeypot field for bots (hidden from users) -->
+            <input type="text" id="honeypot" name="honeypot" style="display: none;" autocomplete="off">
+            
+            <div class="navigation-buttons">
+                <button type="submit" class="btn-primary">Send Message</button>
+                <a href="#hero" class="btn-secondary">Back to Top</a>
+            </div>
+            <div id="responseMessage" class="response-message"></div>
+        </form>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Media Foundry. All rights reserved.</p>
+        </footer>
+    </div>
+</section>
+
+  
+<!-- Include the EmailJS SDK -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<!-- Include your custom JavaScript file -->
+<script src="email.js"></script>
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+
